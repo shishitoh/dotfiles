@@ -1,0 +1,71 @@
+" 必ず最初
+set nocompatible
+
+" バックアップは作らない
+set nobackup
+set nowritebackup
+" スワップファイルも
+set noswapfile
+" 開いているファイルに変更があったときすぐに読み込む
+set autoread
+
+" vimのエンコーディングはutf-8
+set encoding=utf-8
+" ファイルエンコーディング認識はutf-8がトップ
+set fileencodings=utf-8,cp932
+" ここはOSごとデフォルトに任せればいいか
+"set filetype=unix,dos
+
+" backspaceを直感的な挙動に
+set backspace=indent,eol,start
+
+" 行番号表示
+set number
+" windowタイトル設定
+set title
+" カーソル行表示
+set cursorline
+" 入力コマンドを左下に表示
+set showcmd
+" 対応カッコを表示
+set showmatch
+" 検索中でもハイライトさせる
+set incsearch
+" 検索結果ハイライト
+set hlsearch
+" ステータス行は常に表示
+set laststatus=2
+" カーソル位置をステータス行に表示
+set ruler
+" 不可視文字表示設定
+set list
+set listchars=eol:$,tab:>-,trail:^,leadmultispace:\|+++
+" 自動インデント
+set autoindent
+set smartindent
+set smarttab
+" タブサイズ設定
+set tabstop=4
+set shiftwidth=0
+set softtabstop=-1
+
+set wildmenu
+
+filetype plugin indent on
+syntax enable
+
+" hlsearch無効化
+noremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
+
+" insert modeでの左右移動
+inoremap <silent><C-f> <Right>
+inoremap <silent><C-b> <Left>
+
+" command-line modeでの移動
+cnoremap <silent><C-f> <Right>
+cnoremap <silent><C-b> <Left>
+cnoremap <silent><C-a> <Home>
+
+" Manコマンドを導入
+runtime ftplugin/man.vim
+
