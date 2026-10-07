@@ -1,0 +1,10 @@
+#!/bin/bash
+
+alias ls="ls --color=auto"
+alias grep="grep --color=auto"
+alias rm="rm -i"
+alias tig="tig --all"
+
+# マシン固有bashrc読み込み
+[ -e ~/.bashrc.local] && source ~/.bashrc.local
+
