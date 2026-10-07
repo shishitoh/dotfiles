@@ -4,20 +4,20 @@ set -eu
 
 cd "$(dirname "$0")"
 
+basedir="$(git rev-parse --show-toplevel)"
+
 for dotfile in dot_* ; do
 
 	link=~/".${dotfile#dot_}"
 	echo "symlink from \"$dotfile\" to \"$link\"."
 
-	# リンク先ファイルは無い
-	[ ! -e "$dotfile" ] && {
-		ln -s "$dotfile" "$link"
-		echo "success."
-		continue
-	}
+	# リンク作成を試みる
+	ln -s "$basedir/$dotfile" "$link" 2> /dev/null \
+		&& echo "success." \
+		&& continue
 
 	# リンク済み
-	[ "$(readlink -f "$dotfile")" = "$(readlink -f "$link")" ] && {
+	[ "$basedir/$dotfile" -ef "$link" ] && {
 		echo "already linked."
 		continue
 	}
