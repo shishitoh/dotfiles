@@ -57,6 +57,12 @@ syntax enable
 " hlsearch無効化
 noremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
 
+" tab操作
+nnoremap <silent>tt :<C-u>tabnew<CR>
+nnoremap <silent>tq :<C-u>tabclose<CR>
+nnoremap <silent>tn gt
+nnoremap <silent>tp gT
+
 " insert modeでの左右移動
 inoremap <silent><C-f> <Right>
 inoremap <silent><C-b> <Left>
