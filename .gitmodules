@@ -1,0 +1,18 @@
+[submodule "dot_vim/pack/plugin/start/fzf"]
+	path = dot_vim/pack/plugin/start/fzf
+	url = https://github.com/junegunn/fzf.git
+[submodule "dot_vim/pack/plugin/start/fzf.vim"]
+	path = dot_vim/pack/plugin/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
+[submodule "dot_vim/pack/plugin/start/vim-fugitive"]
+	path = dot_vim/pack/plugin/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "dot_vim/pack/plugin/start/vim-gitgutter"]
+	path = dot_vim/pack/plugin/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "dot_vim/pack/plugin/start/vim-lsp"]
+	path = dot_vim/pack/plugin/start/vim-lsp
+	url = https://github.com/prabirshrestha/vim-lsp.git
+[submodule "dot_vim/pack/plugin/start/vim-lsp-settings"]
+	path = dot_vim/pack/plugin/start/vim-lsp-settings
+	url = https://github.com/mattn/vim-lsp-settings.git
