@@ -5,6 +5,7 @@ function! s:on_lsp_buffer_enabled() abort
 	nnoremap <buffer> <F3> <plug>(lsp-definition)
 	nnoremap <buffer> <F2> <plug>(lsp-rename)
 	nnoremap <buffer> K <plug>(lsp-hover)
+	nnoremap <buffer> gL <plug>(lsp-references)
 	nnoremap <buffer> <expr><C-j> lsp#scroll(+1)
 	nnoremap <buffer> <expr><C-k> lsp#scroll(-1)
 endfunction
